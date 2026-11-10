@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informação e apoio para prevenir o bullying no recinto escolar. Respeito, empatia e segurança para todos.">
+  <meta name="theme-color" content="#173b57">
+  <title>Escola Sem Bullying | Respeito começa comigo</title>
+  <style>
+    :root {
+      --navy:#173b57; --blue:#247ba0; --teal:#2a9d8f; --yellow:#f4c95d;
+      --ink:#203040; --muted:#5d6b78; --paper:#f5f8fb; --white:#fff;
+      --shadow:0 12px 35px rgba(23,59,87,.10); --radius:20px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{color:inherit}
+    .topbar{background:var(--navy);color:#fff;padding:9px 6%;font-size:.9rem;text-align:center}
+    header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 16px rgba(0,0,0,.06)}
+    nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--navy);font-size:1.05rem}
+    .brand-mark{width:40px;height:40px;border-radius:13px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:1.3rem}
+    .links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .links a{text-decoration:none;color:#405365;font-weight:700;font-size:.92rem}
+    .links a:hover{color:var(--teal)}
+    .menu-btn{display:none;border:0;background:var(--navy);color:#fff;padding:9px 12px;border-radius:10px;font-size:1rem}
+    .hero{background:linear-gradient(120deg,rgba(16,48,72,.96),rgba(36,123,160,.88)),radial-gradient(circle at 80% 20%,#63c5b4,transparent 35%);color:#fff;padding:82px 22px 76px}
+    .hero-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:center}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:6px 13px;border-radius:30px;font-size:.85rem;font-weight:700;letter-spacing:.04em}
+    h1{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.06;margin:20px 0}
+    .hero p{font-size:1.12rem;max-width:610px;color:#e9f4f8}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+    .btn{display:inline-block;text-decoration:none;padding:13px 19px;border-radius:12px;font-weight:800;border:2px solid transparent}
+    .btn-yellow{background:var(--yellow);color:#23384a}
+    .btn-outline{border-color:rgba(255,255,255,.7);color:#fff}
+    .hero-art{min-height:270px;border:1px solid rgba(255,255,255,.25);border-radius:35px;background:rgba(255,255,255,.1);display:grid;place-items:center;text-align:center;padding:25px}
+    .hero-art .symbol{font-size:6rem;line-height:1}
+    .hero-art strong{display:block;font-size:1.35rem;margin-top:15px}
+    .hero-art span{color:#e4f2f7}
+    main{max-width:1080px;margin:auto;padding:0 22px}
+    section{padding:68px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 34px}
+    .section-head .tag{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+    h2{font-size:clamp(1.8rem,3.4vw,2.65rem);line-height:1.15;color:var(--navy);margin:9px 0 12px}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid #eaf0f4}
+    .card .icon{width:48px;height:48px;border-radius:14px;background:#e8f5f3;display:grid;place-items:center;font-size:1.5rem;margin-bottom:15px}
+    .card h3{color:var(--navy);margin:0 0 8px;font-size:1.15rem}
+    .card p{margin:0;color:var(--muted)}
+    .definition{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center}
+    .quote-panel{background:var(--navy);color:#fff;border-radius:26px;padding:32px;box-shadow:var(--shadow)}
+    .quote-panel .big{font-size:3rem}
+    .quote-panel h3{font-size:1.5rem;line-height:1.25;margin:8px 0}
+    .quote-panel p{color:#dcebf2;margin-bottom:0}
+    .definition-copy p{color:var(--muted)}
+    .definition-copy ul{padding-left:21px;color:var(--muted)}
+    .definition-copy li{margin:7px 0}
+    .soft{background:#eaf3f7;border-radius:28px;padding:38px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{background:#fff;border-radius:18px;padding:20px;border-top:4px solid var(--teal)}
+    .number{font-weight:900;color:var(--teal);font-size:1.3rem}
+    .step h3{font-size:1.05rem;color:var(--navy);margin:6px 0}
+    .step p{font-size:.94rem;color:var(--muted);margin:0}
+    .notice{background:#fff7df;border-left:5px solid var(--yellow);padding:18px 20px;border-radius:12px;color:#5d4a18;margin-top:22px}
+    .pledge{background:linear-gradient(120deg,#247ba0,#2a9d8f);border-radius:28px;padding:42px;color:#fff;text-align:center}
+    .pledge h2{color:#fff}
+    .pledge p{max-width:680px;margin:0 auto 20px;color:#eaf8f5}
+    .pledge .btn{background:#fff;color:var(--navy);cursor:pointer}
+    .message{margin-top:14px;min-height:24px;font-weight:700}
+    .help-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .help-card{background:#fff;padding:25px;border-radius:18px;box-shadow:var(--shadow)}
+    .help-card h3{margin-top:0;color:var(--navy)}
+    .help-card p{color:var(--muted)}
+    footer{background:#122f46;color:#dce9ef;text-align:center;padding:30px 20px;margin-top:35px}
+    footer strong{color:#fff}
+    footer p{margin:5px auto;max-width:720px;font-size:.92rem}
+    @media(max-width:760px){
+      .hero-inner,.definition{grid-template-columns:1fr}
+      .hero{padding:60px 20px}
+      .hero-art{min-height:210px}
+      .cards{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 24px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}
+      .links.open{display:flex}
+      .menu-btn{display:block}
+    }
+    @media(max-width:480px){.cards,.steps,.help-grid{grid-template-columns:1fr}.soft{padding:22px}.hero-art .symbol{font-size:4.5rem}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Uma escola segura começa com respeito, empatia e união.</div>
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="brand" href="#inicio"><span class="brand-mark">♡</span> Escola Sem Bullying</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <div class="links" id="navLinks">
+        <a href="#sobre">O que é?</a><a href="#tipos">Tipos</a><a href="#sinais">Como reconhecer</a><a href="#agir">Como agir</a><a href="#apoio">Pedir ajuda</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero" id="inicio">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">CAMPANHA DE CONSCIENTIZAÇÃO ESCOLAR</span>
+        <h1>Na nossa escola, o respeito fala mais alto.</h1>
+        <p>Bullying não é brincadeira. Todos têm direito a aprender, conviver e crescer num ambiente seguro, onde cada pessoa é respeitada.</p>
+        <div class="actions">
+          <a class="btn btn-yellow" href="#agir">Saiba como agir</a>
+          <a class="btn btn-outline" href="#sobre">Conhecer o tema</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Símbolo de união e respeito">
+        <div><div class="symbol">🤝</div><strong>Juntos contra o bullying</strong><span>Respeitar é uma escolha diária.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="sobre">
+      <div class="definition">
+        <div class="quote-panel">
+          <div class="big">“</div>
+          <h3>As palavras e as atitudes podem marcar. Escolhe usar as tuas para construir, não para magoar.</h3>
+          <p>Uma mensagem para toda a comunidade escolar.</p>
+        </div>
+        <div class="definition-copy">
+          <span class="tag">Compreender para prevenir</span>
+          <h2>O que é o bullying?</h2>
+          <p>Bullying é um comportamento agressivo e intencional, repetido ao longo do tempo, em que uma pessoa ou grupo procura magoar, humilhar, intimidar ou excluir outra pessoa. Geralmente existe um desequilíbrio de poder entre quem pratica e quem sofre.</p>
+          <p>Na escola, pode acontecer na sala de aulas, no recreio, nos corredores, no caminho para casa ou também através da internet.</p>
+          <ul>
+            <li>Não é uma brincadeira quando alguém sofre ou sente medo.</li>
+            <li>Ninguém merece ser humilhado ou excluído.</li>
+            <li>Pedir ajuda é um ato de coragem.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="tipos">
+      <div class="section-head"><span class="tag">Formas de bullying</span><h2>O bullying pode aparecer de várias maneiras</h2><p>Reconhecer os comportamentos ajuda-nos a interrompê-los e a procurar apoio.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">🗣️</div><h3>Verbal</h3><p>Insultar, gozar, ameaçar, colocar alcunhas ofensivas ou fazer comentários para humilhar.</p></article>
+        <article class="card"><div class="icon">🚫</div><h3>Social ou psicológico</h3><p>Excluir alguém de propósito, espalhar rumores, manipular amizades ou envergonhar uma pessoa.</p></article>
+        <article class="card"><div class="icon">✋</div><h3>Físico</h3><p>Empurrar, bater, pontapear, puxar ou danificar os pertences de outra pessoa.</p></article>
+        <article class="card"><div class="icon">📱</div><h3>Cyberbullying</h3><p>Usar mensagens, redes sociais, fotografias ou grupos online para ameaçar, insultar ou expor alguém.</p></article>
+        <article class="card"><div class="icon">👥</div><h3>Exclusão</h3><p>Deixar alguém de fora repetidamente, incentivar colegas a não falar com essa pessoa ou isolá-la.</p></article>
+        <article class="card"><div class="icon">🎒</div><h3>Contra os pertences</h3><p>Esconder, estragar ou tirar materiais escolares e objetos pessoais de forma intencional.</p></article>
+      </div>
+    </section>
+
+    <section id="sinais">
+      <div class="section-head"><span class="tag">Atenção e empatia</span><h2>Como reconhecer que alguém precisa de apoio?</h2><p>Uma mudança de comportamento pode ter várias causas. O importante é ouvir sem julgar e procurar ajuda.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">😟</div><h3>Emocionais</h3><p>Tristeza frequente, medo de ir à escola, ansiedade ou perda de confiança.</p></article>
+        <article class="card"><div class="icon">📚</div><h3>Na escola</h3><p>Vontade de faltar às aulas, isolamento no recreio ou dificuldade em concentrar-se.</p></article>
+        <article class="card"><div class="icon">🤐</div><h3>Nas relações</h3><p>Evitar colegas, deixar de participar em atividades ou ficar frequentemente sozinho.</p></article>
+      </div>
+      <div class="notice"><strong>Lembra-te:</strong> estes sinais não provam, por si só, que existe bullying. Conversa com a pessoa com respeito e encaminha a situação para um adulto de confiança.</div>
+    </section>
+
+    <section id="agir">
+      <div class="soft">
+        <div class="section-head"><span class="tag">Atitudes que fazem a diferença</span><h2>O que fazer perante o bullying?</h2><p>Se estás a sofrer, presenciaste uma situação ou conheces alguém afetado, há passos seguros que podes tomar.</p></div>
+        <div class="steps">
+          <article class="step"><div class="number">01</div><h3>Não participes</h3><p>Não rias, não partilhes mensagens ofensivas e não incentives o comportamento.</p></article>
+          <article class="step"><div class="number">02</div><h3>Apoia com respeito</h3><p>Ouve a pessoa, mostra que não está sozinha e evita culpá-la.</p></article>
+          <article class="step"><div class="number">03</div><h3>Conta a um adulto</h3><p>Fala com um professor, director de turma, responsável da escola ou familiar de confiança.</p></article>
+          <article class="step"><div class="number">04</div><h3>Procura acompanhamento</h3><p>Se continuar, informa novamente a escola e pede que a situação seja acompanhada.</p></article>
+        </div>
+        <div class="notice"><strong>Se houver perigo imediato:</strong> afasta-te para um local seguro e procura imediatamente um professor, funcionário ou outro adulto responsável. Não tentes resolver uma situação perigosa sozinho.</div>
+      </div>
+    </section>
+
+    <section id="apoio">
+      <div class="section-head"><span class="tag">Ninguém tem de enfrentar isto sozinho</span><h2>Onde procurar ajuda?</h2><p>Falar é um primeiro passo importante. Escolhe um adulto responsável com quem te sintas seguro.</p></div>
+      <div class="help-grid">
+        <div class="help-card"><h3>Na escola</h3><p>Procura um professor de confiança, director de turma, direcção da escola, psicólogo escolar (se existir) ou outro responsável pela protecção dos alunos.</p></div>
+        <div class="help-card"><h3>Em casa e na comunidade</h3><p>Conversa com os teus pais ou encarregados de educação, familiares de confiança ou outro adulto responsável que possa ajudar a contactar a escola.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="pledge">
+        <h2>O meu compromisso pelo respeito</h2>
+        <p>Uma escola melhor começa nas pequenas atitudes de cada dia. Assume o compromisso de respeitar, incluir e apoiar os outros.</p>
+        <button class="btn" id="pledgeBtn">Eu escolho o respeito ✨</button>
+        <div class="message" id="pledgeMessage" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>ESCOLA SEM BULLYING</strong></p>
+    <p>Respeito, empatia e união: juntos construímos um ambiente escolar seguro.</p>
+    <p>Conteúdo educativo de sensibilização. Se precisares de ajuda, fala com um adulto de confiança ou com a direcção da escola.</p>
+    <p>© <span id="year"></span> — Campanha de prevenção do bullying no recinto escolar.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('pledgeBtn').addEventListener('click', () => {
+      document.getElementById('pledgeMessage').textContent = 'Obrigado! O respeito começa contigo. 💚';
+      document.getElementById('pledgeBtn').textContent = 'Compromisso assumido ✓';
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
